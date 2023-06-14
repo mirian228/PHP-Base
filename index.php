@@ -9,12 +9,9 @@
 
 <body>
 
-
-
 </body>
 
 </html>
-
 <?php
 
 ?>

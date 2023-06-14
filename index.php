@@ -8,14 +8,23 @@
 </head>
 
 <body>
-   
+
 
 </body>
 
 </html>
 
 <?php
-    $foods = array("apple", "orange", "banana", "coconut");
-    echo $foods[1];
+$foods = array("apple", "orange", "banana", "coconut");
+
+//$foods[0] = "pineapple";
+//array_push($foods, "pineapple");
+//array_pop($foods);
+//array_shift($foods);
+//$reversed_foods = array_reverse($foods);
+echo count($foods) . "<br>";
+foreach ($foods as $food) {
+    echo $food . "<br>";
+}
 
 ?>

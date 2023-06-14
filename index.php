@@ -8,13 +8,14 @@
 </head>
 
 <body>
+   
 
 </body>
 
 </html>
 
 <?php
-
-
+    $foods = array("apple", "orange", "banana", "coconut");
+    echo $foods[1];
 
 ?>

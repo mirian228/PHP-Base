@@ -1,3 +1,8 @@
+<?php
+    include("database.php");
+
+    mysqli_close($connection);
+?>
 <!DOCTYPE html>
 <html lang="en">
 

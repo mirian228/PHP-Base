@@ -1,8 +1,5 @@
 <?php
-    include("database.php");
-
-
-    mysqli_close($connection);
+include("database.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +11,14 @@
 </head>
 
 <body>
+
+
+
 </body>
 
 </html>
 <?php
+
+
 
 ?>

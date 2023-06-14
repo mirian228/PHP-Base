@@ -8,26 +8,49 @@
 </head>
 
 <body>
-    
+    <form action="index.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Age:</label>
+        <input type="text" name="age"><br>
+        <label>Email:</label>
+        <input type="text" name="email"><br>
+        <input type="submit" name="login" value="login"><br>
+    </form>
 </body>
 
 </html>
 
 <?php
-    $username = "Mirian Surmanidze";
-    $phone = 123-4567-88;
-    $username = strtolower($username);
-    echo $username . "<br>";
-    $username = strtoupper($username);
-    echo $username . "<br>";
-    $username = trim($username);
-    echo $username . "<br>";
-    $username = str_pad($username, 20, "0");
-    echo $username . "<br>";
-    //$phone = str_replace("-", "", $phone);
-    //echo $phone . "<br>"
-    $equals = strcmp($username, "Mirian Surmanidze");
-    echo $equals . "<br>";
-    $count = strlen($username);
-    echo $count;
+/* if (isset($_POST["login"])) {
+    $username = filter_input(
+        INPUT_POST,
+        "username",
+        FILTER_SANITIZE_SPECIAL_CHARS
+    );
+    $age = filter_input(
+        INPUT_POST,
+        "age",
+        FILTER_SANITIZE_NUMBER_INT
+    );
+    $email = filter_input(
+        INPUT_POST,
+        "email",
+        FILTER_SANITIZE_EMAIL
+    );
+    echo "Hello {$username}";
+    echo "You are {$age} old";
+    echo "Your email is {$email}";
+} */
+
+if (isset($_POST["login"])) {
+    $age = filter_input(INPUT_POST, "age",
+        FILTER_VALIDATE_INT);
+        if(empty($age)) {
+            echo "That number wasn't valid";
+        } else {
+            echo "You are $age years old";
+        }
+}
+
 ?>

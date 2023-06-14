@@ -15,16 +15,31 @@
 </html>
 
 <?php
-$foods = array("apple", "orange", "banana", "coconut");
 
-//$foods[0] = "pineapple";
-//array_push($foods, "pineapple");
-//array_pop($foods);
-//array_shift($foods);
-//$reversed_foods = array_reverse($foods);
-echo count($foods) . "<br>";
-foreach ($foods as $food) {
-    echo $food . "<br>";
-}
+$capitals = array("USA"=>"Washington D.C", 
+            "Japan"=>"Kyoto", 
+            "South Korea"=>"Seoul", 
+            "India"=>"New Delhi");
+
+//$capitals["China"] = "Beijing";
+//array_pop($capitals);
+//array_shift($capitals);
+$keys = array_keys($capitals);
+// $values = array_values($capitals);
+//$capitals = array_flip($capitals);
+
+echo $capitals["USA"] . "<br>";
+echo $capitals["Japan"] . "<br>";
+
+    foreach($capitals as $key => $value) {
+        echo "<br>";
+        echo "{$key} = {$value} <br>";
+    }
+
+    echo "<br>";
+
+    foreach($keys as $key) {
+        echo "{$key} <br>";
+    }
 
 ?>
